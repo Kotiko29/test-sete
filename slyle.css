@@ -1,0 +1,16 @@
+.palette-small {
+  display: flex;
+}
+
+.part {
+  display: flex;
+}
+
+.part {
+  display: flex;
+}
+
+/*�������*/
+.palette-small.color-2 {
+  align-self: flex-start;
+}
