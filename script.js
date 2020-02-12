@@ -1,38 +1,19 @@
 /*jshint esversion: 6 */
-let money = prompt("Ваш бюджет на месяц?", ''),
-	time = prompt('Введите дату в формате YYYY-MM-DD', '');
 
-let appData = {
-	budget: money,
-	expenses: {},
-	optionalExpenses: {},
-	income: [],
-	timeData: time,
-	savings: false
-};
-
-for (let i = 0; i < 2; i++) {
-	let a = prompt("Введите обязательную статью расходов в этом месяце", ''),
-		b = prompt("Во сколько обойдется?", '');
-
-		if ((typeof(a)) === `string` && (typeof(a)) !=null && (typeof(b)) != null && a != `` && b != `` && a.langth < 50) {
-			console.log(done);
-			appData.expenses[a] = b;
-		} //else  надо вернуться обратно в цикл
+function hello() {
+  console.log('hello');
 }
 
-appData.moneyPerDay = appData.budget / 30;
+let btn = document.querySelector('#btn');
+console.log(btn.clientWidth);
+btn.onclick = hello;
 
-alert(`Ежедневный бюджет: ${appData.moneyPerDay}`);
+let sowModal = document.querySelector('#modal-show');
 
-if(appData.moneyPerDay < 100) {
-	console.log(`Минимальный уровнь достатка`);
-} else if (appData.moneyPerDay > 100 && appData.moneyPerDay < 2000) {
-	console.log(`Средний уровнь достатка`);
-} else if (appData.moneyPerDay > 2000) {
-	console.log(`Высокий уровнь достатка`);
-} else {
-	console.log(`Произошла ошибка`);
+function show() {
+  let modal = document.querySelector('.modal');
+  // modal.hidden = true;
+  modal.style.display = "block";
 }
 
-
+sowModal.onclick = show;
